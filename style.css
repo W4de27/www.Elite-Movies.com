@@ -1,0 +1,1429 @@
+@font-face {
+    font-family: 'logo';
+    src: url(fonts/Fascinate_Inline/FascinateInline-Regular.ttf);
+}
+@font-face {
+    font-family: 'navbar';
+    src: url(fonts/Dosis/Dosis-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: 'title';
+    src: url(fonts/Anta/Anta-Regular.ttf);
+}
+@font-face {
+    font-family: 'text';
+    src: url(fonts/Rubik/Rubik-Italic-VariableFont_wght.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: rgb(8, 8, 8);
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 5;
+}
+header .logo h2 {
+    color: wheat;
+    font-family: logo;
+    font-size: 2.0rem;
+    cursor: pointer;
+    margin-left: 20px;
+}
+header .logo h2 span {
+    color: red;
+}
+/* ############ navbar ############ */
+
+header .navbar {
+    position: relative;
+}
+header .navbar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+header .navbar ul li :where(a , p) {
+    text-decoration: none;
+    font-family: navbar;
+    color: wheat;
+    position: relative;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+header .navbar ul li :where(a , p):hover {
+    color: red;
+}
+header .navbar ul li p i {
+    font-size: 0.9rem;
+}
+header .navbar ul .special {
+    position: absolute;
+    width: 110px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.981);
+    left: 65px;
+    top: 40px;
+    display: none;
+    text-align: start;
+    border: 2px solid rgb(38, 38, 38);
+    border-radius: 5px;
+}
+header .navbar ul .special.active {
+    background-color: white;
+}
+header .navbar ul .special ol {
+    list-style: none;
+    padding: 15px;
+}
+header .navbar ul .special ol li {
+ margin-bottom: 10px;
+}
+header .navbar ul .special ol li .aaa.active {
+    color: black;
+}
+header .navbar ul .special ol li .aaa.active:hover {
+    color: red;
+}
+
+header .navbar ul .special.hidde {
+    display: block;
+}
+
+
+
+/* ##################### box search ################## */
+
+header .search {
+    background-color: rgb(220, 220, 220);
+    width: 300px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    border: none;
+    outline: none;
+}
+
+header .search i {
+    color: beige;
+    background-color: rgb(93, 93, 93);
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+header .search input {
+    width: 85%;
+    height: 100%;
+    padding: 3px 10px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    font-family: text;
+}
+header .search input::placeholder {
+    color: rgb(93, 93, 93);
+    font-size: 0.9rem;
+    font-family: title;
+}
+/* ################# tooggle mode ############## */
+
+header .toggle {
+    width: 40px;
+    height: 20px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+}
+header .toggle .toggle-icon {
+    color: goldenrod;
+}
+header .toggle .ball {
+    width: 18px;
+    height: 18px;
+    background-color: black;
+    position: absolute;
+    right: 1px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+/* ################# aside ################# */
+
+
+
+aside {
+    width: 60px;
+    height: 100%;
+    background-color: black;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+aside ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: auto;
+    list-style-type: none;
+    gap: 50px;
+}
+aside ul li a {
+    text-decoration: none;
+    color: wheat;
+    font-size: 1.3rem;
+    transition: all 0.2s ease-out;
+}
+aside ul li a:hover {
+    color: red;
+}
+
+
+
+
+
+/* ################################ section ################################ */
+
+section {
+    width: 100%;
+    height: auto;
+    padding: 60px 0 0 60px;
+}
+section .container .container-img {
+    width: 100%;
+    height: 560px;
+    background: linear-gradient(to bottom , rgba(0, 0, 0, 0) , #00000087,rgb(8, 8, 8)), url(imgs-P5/bg-top.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: end;
+    align-items: start;
+}
+section .container .container-img .info-img {
+    width: 50%;
+    height: auto;
+    background-color: transparent;
+    padding: 80px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+section .container .container-img .info-img h1 {
+    font-family: title;
+    color: wheat;
+    font-size: 3rem;
+    margin-bottom: 60px;
+}
+section .container .container-img .info-img p {
+    color: rgba(255, 255, 255, 0.711);
+    font-family: text;
+    text-align: center;
+    line-height: 180%;
+    font-size: 1.1rem;
+    margin-bottom: 80px;
+}
+section .container .container-img .info-img button {
+    color: wheat;
+    background-color: red;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+    outline: none;
+}
+section .container .container-img .info-img button:hover {
+    background-color: rgb(224, 46, 46);
+    color: wheat;
+}
+
+
+
+/* #################### .ar1 ################## */
+
+.ar1 {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding: 60px 60px 60px 100px;
+    background-color: rgb(8, 8, 8);
+}
+
+.ar1 h1 {
+    color: wheat;
+    font-size: 3rem;
+    font-family: title;
+}
+.ar1 .line1 .box1 {
+    width: 100%;
+    height: 400px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: hidden;
+    gap: 40px;
+    position: relative;
+    padding: 0 60px 0 0;
+}
+.ar1 .line1 .box1 .b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.ar1 .line1 .box1 img {
+    width: 280px;
+    height: 280px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.ar1 .line1 .box1 img:hover {
+    width: 340px;
+}
+
+.ar1 .line1 .box1 .b h2 {
+    color: wheat;
+    font-family: navbar;
+}
+.ar1 .line1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.ar1 .line1 .btnleft {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    color: rgba(245, 222, 179, 0.622);
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.ar1 .line1 .btnleft:hover {
+    background-color: rgba(0, 0, 0, 0.768);
+    color: white;
+}
+.ar1 .line1 .btnright {
+    position: absolute;
+    right: 0;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    color: rgba(245, 222, 179, 0.622);
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.ar1 .line1 .btnright:hover {
+    background-color: rgba(0, 0, 0, 0.768);
+    color: white;
+}
+
+/*  ######################### article 2 #################### */
+
+
+
+.ar2 {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding: 60px 60px 60px 100px;
+    background-color: rgb(8, 8, 8);
+}
+
+.ar2 h1 {
+    color: wheat;
+    font-size: 3rem;
+    font-family: title;
+}
+
+.ar2 .line2 .box2 {
+    width: 100%;
+    height: 400px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: hidden;
+    gap: 40px;
+    position: relative;
+    padding: 0 60px 0 0;
+}
+
+.ar2 .line2 .box2 .b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ar2 .line2 .box2 img {
+    width: 280px;
+    height: 280px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar2 .line2 .box2 img:hover {
+    width: 340px;
+}
+
+.ar2 .line2 .box2 .b h2 {
+    color: wheat;
+    font-family: navbar;
+}
+
+.ar2 .line2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ar2 .line2 .btnleft {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    color: rgba(245, 222, 179, 0.622);
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar2 .line2 .btnleft:hover {
+    background-color: rgba(0, 0, 0, 0.768);
+    color: white;
+}
+
+.ar2 .line2 .btnright {
+    position: absolute;
+    right: 0;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    color: rgba(245, 222, 179, 0.622);
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar2 .line2 .btnright:hover {
+    background-color: rgba(0, 0, 0, 0.768);
+    color: white;
+}
+
+
+/* #################### article 3 ################### */
+
+
+.ar3 {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding: 60px 60px 60px 100px;
+    background-color: rgb(8, 8, 8);
+}
+
+.ar3 h1 {
+    color: wheat;
+    font-size: 3rem;
+    font-family: title;
+}
+
+.ar3 .line3 .box3 {
+    width: 100%;
+    height: 400px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: hidden;
+    gap: 40px;
+    position: relative;
+    padding: 0 60px 0 0;
+}
+
+.ar3 .line3 .box3 .b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ar3 .line3 .box3 img {
+    width: 280px;
+    height: 280px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar3 .line3 .box3 img:hover {
+    width: 340px;
+}
+
+.ar3 .line3 .box3 .b h2 {
+    color: wheat;
+    font-family: navbar;
+}
+
+.ar3 .line3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ar3 .line3 .btnleft {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    color: rgba(245, 222, 179, 0.622);
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar3 .line3 .btnleft:hover {
+    background-color: rgba(0, 0, 0, 0.768);
+    color: white;
+}
+
+.ar3 .line3 .btnright {
+    position: absolute;
+    right: 0;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    color: rgba(245, 222, 179, 0.622);
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar3 .line3 .btnright:hover {
+    background-color: rgba(0, 0, 0, 0.768);
+    color: white;
+}
+
+
+
+/* #################### article 4 ################### */
+
+
+.ar4 {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding: 60px 60px 60px 100px;
+    background-color: rgb(8, 8, 8);
+}
+
+.ar4 h1 {
+    color: wheat;
+    font-size: 3rem;
+    font-family: title;
+}
+
+.ar4 .line4 .box4 {
+    width: 100%;
+    height: 400px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: hidden;
+    gap: 40px;
+    position: relative;
+    padding: 0 60px 0 0;
+}
+
+.ar4 .line4 .box4 .b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ar4 .line4 .box4 img {
+    width: 280px;
+    height: 280px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar4 .line4 .box4 img:hover {
+    width: 340px;
+}
+
+.ar4 .line4 .box4 .b h2 {
+    color: wheat;
+    font-family: navbar;
+}
+
+.ar4 .line4 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ar4 .line4 .btnleft {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    color: rgba(245, 222, 179, 0.622);
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar4 .line4 .btnleft:hover {
+    background-color: rgba(0, 0, 0, 0.768);
+    color: white;
+}
+
+.ar4 .line4 .btnright {
+    position: absolute;
+    right: 0;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    color: rgba(245, 222, 179, 0.622);
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar4 .line4 .btnright:hover {
+    background-color: rgba(0, 0, 0, 0.768);
+    color: white;
+}
+
+
+
+
+/* #################### article 5 ################### */
+
+
+.ar5 {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding: 60px 60px 60px 100px;
+    background-color: rgb(8, 8, 8);
+}
+
+.ar5 h1 {
+    color: wheat;
+    font-size: 3rem;
+    font-family: title;
+}
+
+.ar5 .line5 .box5 {
+    width: 100%;
+    height: 400px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: hidden;
+    gap: 40px;
+    position: relative;
+    padding: 0 60px 0 0;
+}
+
+.ar5 .line5 .box5 .b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ar5 .line5 .box5 img {
+    width: 280px;
+    height: 280px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar5 .line5 .box5 img:hover {
+    width: 340px;
+}
+
+.ar5 .line5 .box5 .b h2 {
+    color: wheat;
+    font-family: navbar;
+}
+
+.ar5 .line5 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ar5 .line5 .btnleft {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    color: rgba(245, 222, 179, 0.622);
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar5 .line5 .btnleft:hover {
+    background-color: rgba(0, 0, 0, 0.768);
+    color: white;
+}
+
+.ar5 .line5 .btnright {
+    position: absolute;
+    right: 0;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    color: rgba(245, 222, 179, 0.622);
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar5 .line5 .btnright:hover {
+    background-color: rgba(0, 0, 0, 0.768);
+    color: white;
+}
+
+
+
+
+/* #################### article 6 ################### */
+
+
+.ar6 {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding: 60px 60px 60px 100px;
+    background-color: rgb(8, 8, 8);
+}
+
+.ar6 h1 {
+    color: wheat;
+    font-size: 3rem;
+    font-family: title;
+}
+
+.ar6 .line6 .box6 {
+    width: 100%;
+    height: 400px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: hidden;
+    gap: 40px;
+    position: relative;
+    padding: 0 60px 0 0;
+}
+
+.ar6 .line6 .box6 .b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ar6 .line6 .box6 img {
+    width: 280px;
+    height: 280px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar6 .line6 .box6 img:hover {
+    width: 340px;
+}
+
+.ar6 .line6 .box6 .b h2 {
+    color: wheat;
+    font-family: navbar;
+}
+
+.ar6 .line6 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ar6 .line6 .btnleft {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    color: rgba(245, 222, 179, 0.622);
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar6 .line6 .btnleft:hover {
+    background-color: rgba(0, 0, 0, 0.768);
+    color: white;
+}
+
+.ar6 .line6 .btnright {
+    position: absolute;
+    right: 0;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    color: rgba(245, 222, 179, 0.622);
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar6 .line6 .btnright:hover {
+    background-color: rgba(0, 0, 0, 0.768);
+    color: white;
+}
+
+
+
+
+/* #################### article 7 ################### */
+
+
+.ar7 {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding: 60px 60px 60px 100px;
+    background-color: rgb(8, 8, 8);
+}
+
+.ar7 h1 {
+    color: wheat;
+    font-size: 3rem;
+    font-family: title;
+}
+
+.ar7 .line7 .box7 {
+    width: 100%;
+    height: 400px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: hidden;
+    gap: 40px;
+    position: relative;
+    padding: 0 60px 0 0;
+}
+
+.ar7 .line7 .box7 .b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ar7 .line7 .box7 img {
+    width: 280px;
+    height: 280px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar7 .line7 .box7 img:hover {
+    width: 340px;
+}
+
+.ar7 .line7 .box7 .b h2 {
+    color: wheat;
+    font-family: navbar;
+}
+
+.ar7 .line7 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ar7 .line7 .btnleft {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    color: rgba(245, 222, 179, 0.622);
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar7 .line7 .btnleft:hover {
+    background-color: rgba(0, 0, 0, 0.768);
+    color: white;
+}
+
+.ar7 .line7 .btnright {
+    position: absolute;
+    right: 0;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    color: rgba(245, 222, 179, 0.622);
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar7 .line7 .btnright:hover {
+    background-color: rgba(0, 0, 0, 0.768);
+    color: white;
+}
+
+
+
+
+
+/* #################### article 8 ################### */
+
+
+.ar8 {
+    width: 100%;
+    height: auto;
+    background-color: transparent;
+    padding: 60px 60px 60px 100px;
+    background-color: rgb(8, 8, 8);
+}
+
+.ar8 h1 {
+    color: wheat;
+    font-size: 3rem;
+    font-family: title;
+}
+
+.ar8 .line8 .box8 {
+    width: 100%;
+    height: 400px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: hidden;
+    gap: 40px;
+    position: relative;
+    padding: 0 60px 0 0;
+}
+
+.ar8 .line8 .box8 .b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.ar8 .line8 .box8 img {
+    width: 280px;
+    height: 280px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar8 .line8 .box8 img:hover {
+    width: 340px;
+}
+
+.ar8 .line8 .box8 .b h2 {
+    color: wheat;
+    font-family: navbar;
+}
+
+.ar8 .line8 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.ar8 .line8 .btnleft {
+    position: absolute;
+    left: 0;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    color: rgba(245, 222, 179, 0.622);
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar8 .line8 .btnleft:hover {
+    background-color: rgba(0, 0, 0, 0.768);
+    color: white;
+}
+
+.ar8 .line8 .btnright {
+    position: absolute;
+    right: 0;
+    top: 35%;
+    background-color: rgba(0, 0, 0, 0.522);
+    z-index: 2;
+    width: 60px;
+    height: 60px;
+    color: rgba(245, 222, 179, 0.622);
+    font-size: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.ar8 .line8 .btnright:hover {
+    background-color: rgba(0, 0, 0, 0.768);
+    color: white;
+}
+
+
+/* ####################### toggle mode colors #################### */
+
+.ar1.active , .ar2.active, .ar3.active, .ar4.active, .ar5.active , .ar6.active, .ar7.active , .ar8.active {
+    background-color: white;
+}
+.ar1 .begin.active, .ar2 .begin.active, .ar3 .begin.active, .ar4 .begin.active, .ar5 .begin.active, .ar6 .begin.active, .ar7 .begin.active, .ar8 .begin.active {
+    color: black;
+}
+.head.active {
+    background-color: rgb(237, 237, 237);
+}
+.head .logoh1.active {
+    color: black;
+}
+.head .aa.active {
+    color: black;
+}
+.head .aa.active:hover {
+    color: red;
+}
+.aside.active {
+    background-color: rgb(237, 237, 237);
+}
+.aside .icons.active {
+    color: black;
+}
+.aside .icons.active:hover {
+    color: red;
+}
+.ar1 .line1 .box1 .b .titleimg.active {
+    color: black;
+}
+.ar2 .line2 .box2 .b .titleimg.active {
+    color: black;
+}
+.ar3 .line3 .box3 .b .titleimg.active {
+    color: black;
+}
+.ar4 .line4 .box4 .b .titleimg.active {
+    color: black;
+}
+.ar5 .line5 .box5 .b .titleimg.active {
+    color: black;
+}
+.ar6 .line6 .box6 .b .titleimg.active {
+    color: black;
+}
+.ar7 .line7 .box7 .b .titleimg.active {
+    color: black;
+}
+.ar8 .line8 .box8 .b .titleimg.active {
+    color: black;
+}
+.head .toggle.active {
+    background-color: black;
+}
+.head .toggle .ball.active{
+    background-color: white;
+    transform: translateX(-20px);
+}
+
+
+
+
+
+
+
+
+/* ###################### videos part ###################### */
+body {
+    overflow: auto;
+}
+
+.cards {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(128, 128, 128, 0.875);
+    z-index: 10;
+    visibility: hidden;
+}
+
+.cards .b {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.cards .b h1 {
+    color: black;
+    font-family: title;
+    text-align: center;
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.cards .b video {
+    width: 900px;
+    height: 500px;
+    border-radius: 25px;
+}
+
+.cards .b i {
+    color: red;
+    position: absolute;
+    right: 7%;
+    top: 10%;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.ddd {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: grey;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    visibility: hidden;
+}
+
+.ddd .bb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.ddd .bb h1 {
+    color: black;
+    font-family: title;
+    text-align: center;
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+.ddd .bb video {
+    width: 900px;
+    height: 500px;
+    border-radius: 25px;
+}
+
+.ddd .bb i {
+    color: red;
+    position: absolute;
+    right: 7%;
+    top: 10%;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+
+
+
+
+/*  #################### footer ###################### */
+
+footer {
+    width: 100%;
+    height: 500px;
+    padding-left: 60px;
+    position: relative;
+}
+footer .image {
+    width: 100%;
+    height: 100%;
+    background: url(imgs-P5/footer11.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+} 
+
+footer .image .data {
+    background-color: rgba(0, 0, 0, 0.409);
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+footer .image .data :where(.locat1 , .locat2 , .locat3 , .locat4) {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    width: 30%;
+    gap: 20px;
+}
+footer .image .data :where(.locat2, .locat3, .locat4) h1 {
+    color: wheat;
+    margin-bottom: 30px;
+    font-family: title;
+    font-size: 2rem;
+}
+footer .image .data :where(.locat2, .locat3) ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+footer .image .data :where(.locat2, .locat3) ul li a {
+    color: rgba(255, 255, 255, 0.827);
+    text-decoration: none;
+    font-family: text;
+    font-size: 1.2rem;
+    transition: all 0.5s ease;
+}
+footer .image .data :where(.locat2, .locat3) ul li a:hover {
+    color: rgb(255, 113, 113);
+}
+
+
+footer .image .data .locat1 {
+    width: 45%;
+    margin-right: 50px;
+}
+footer .image .data .locat1 h1 {
+    color: white;
+    font-family: logo;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+footer .image .data .locat1 h1 span {
+    color: rgb(252, 0, 0);
+    text-shadow: 0 0 1px white;
+}
+footer .image .data .locat1 p {
+    color: rgba(255, 255, 255, 0.876);
+    font-family: text;
+    font-size: 1.1rem;
+    line-height: 170%;
+}
+
+footer .image .data .locat4 .liens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+footer .image .data .locat4 .liens li a {
+    text-decoration: none;
+}
+footer .image .data .locat4 .liens li a i {
+    font-size: 1.5rem;
+    text-decoration: none;
+    background-color: black;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.4s ease;
+}
+footer .image .data .locat4 .liens li a .fa-facebook-f:hover {
+    color: white;
+    background-color: blue;
+    box-shadow: 0 0 20px blue;
+}
+footer .image .data .locat4 .liens li a .fa-youtube:hover {
+    color: red;
+    background-color: white;
+    box-shadow: 0 0 20px red;
+}
+footer .image .data .locat4 .liens li a .fa-google:hover {
+    color: black;
+    background-color: white;
+    box-shadow: 0 0 20px white;
+}
+footer .image .data .locat4 .liens li a .fa-linkedin-in:hover {
+    color: white;
+    background-color: rgb(46, 46, 255);
+    box-shadow: 0 0 20px rgb(46, 46, 255);
+}
+footer .image .data .locat4 .liens li a .fa-github:hover {
+    color: black;
+    background-color: white;
+    box-shadow: 0 0 20px white;
+}
+
+footer .image .data .para {
+    color: rgba(255, 255, 255, 0.715);
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    font-family: text;
+}
